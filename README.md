@@ -1,5 +1,5 @@
 Calculadora CLI - Atividade RI6
-Projeto desenvolvido para a disciplina de Técnicas de Programação do curso de Análise e Desenvolvimento de Sistemas (DSM) da FATEC (2º Semestre), sob orientação do Prof. Gerson.
+Projeto desenvolvido para a disciplina de Técnicas de Programação do curso de Desenvolvimento de Software Multiplataforma (DSM) da FATEC (2º Semestre), sob orientação do Prof. Gerson.
 
 📖 Descrição do Projeto
 Este projeto consiste no desenvolvimento de uma calculadora funcional via interface de linha de comando (CLI), utilizando TypeScript e Node.js. O objetivo principal da atividade é aplicar e solidificar os 4 pilares da Programação Orientada a Objetos: Encapsulamento, Herança, Polimorfismo e Abstração.
@@ -30,20 +30,20 @@ Para executar este projeto em sua máquina local, siga os passos abaixo:
 Bash
 
 # 1. Clone o repositório para a sua máquina
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/JoaooMoura/RI6
 
 # 2. Navegue até o diretório do projeto
-cd nome-do-repositorio
+cd RI6
 
 # 3. Instale as dependências necessárias
 npm install
 
 # 4. Compile o código TypeScript para JavaScript
-npm run build
+npx tsc
 
 # 5. Execute a aplicação
-npm run start
-Após executar o comando start, a calculadora será iniciada no seu terminal.
+node out/index.js
+Após executar o comando, a calculadora será iniciada no seu terminal.
 
 📂 Estrutura do Projeto
 A estrutura de pastas foi organizada para promover a separação de responsabilidades e a manutenibilidade do código:
@@ -55,8 +55,6 @@ src/Calculo.ts: Classe abstrata que serve como "contrato" (interface) para todas
 src/operacoes/: Diretório onde cada arquivo representa uma operação matemática específica (Soma.ts, Bhaskara.ts, etc.), herdando da classe Calculo.
 
 src/index.ts: Ponto de entrada da aplicação. Responsável pela lógica da interface com o usuário (menu) e pela orquestração das chamadas às classes de operação.
-
-src/mensagens.ts: Classe responsável por centralizar e gerenciar todas as mensagens exibidas ao usuário, mantendo o index.ts mais limpo.
 
 🧠 Conceitos Aplicados
 Este projeto foi uma oportunidade para praticar os seguintes conceitos fundamentais:
@@ -81,12 +79,6 @@ Para a resolução da atividade RI6, além do material base, foram pesquisados e
 O documento de referência sugeria uma assinatura de método fixa com dois parâmetros. No entanto, a necessidade de suportar a fórmula de Bhaskara (com 3 parâmetros) exigiu uma solução mais flexível. O uso de Rest Parameters permitiu criar um "contrato" na classe abstrata capaz de aceitar um número variável de argumentos, unificando a chamada para todas as operações.
 
 Referência: Parâmetros Rest (MDN Web Docs)
-
-2. Funções Assíncronas (async/await)
-
-Para criar uma experiência de usuário mais fluida e interativa no menu, a interação com o módulo readline foi reestruturada. Em vez do padrão de callbacks, optou-se pelo uso de async/await. Isso permitiu escrever o fluxo de perguntas e respostas de forma sequencial, simplificando drasticamente a leitura e a manutenção do código.
-
-Referência: Função async (MDN Web Docs)
 
 👤 Autor
 BY João Moura.
