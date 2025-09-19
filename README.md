@@ -74,7 +74,7 @@ Separação de Responsabilidades: A lógica de interface do usuário (index.ts),
 Conceitos Adicionais Aplicados
 Para a resolução da atividade RI6, além do material base, foram pesquisados e aplicados conceitos de TypeScript/JavaScript modernos que não eram explicitamente citados no documento de referência.
 
-1. Parâmetros Rest (...args)
+1. Parâmetros Rest (...numeros)
 
 O documento de referência sugeria uma assinatura de método fixa com dois parâmetros. No entanto, a necessidade de suportar a fórmula de Bhaskara (com 3 parâmetros) exigiu uma solução mais flexível. O uso de Rest Parameters permitiu criar um "contrato" na classe abstrata capaz de aceitar um número variável de argumentos, unificando a chamada para todas as operações.
 
